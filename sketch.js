@@ -58,7 +58,7 @@ mainCyclist.addAnimation("SahilRunning",mainRacerImg1);
 mainCyclist.scale=0.07;
   
 //set collider for mainCyclist
-mainCyclist.setCollider("rectangle",0,0,40,40);
+mainCyclist.setCollider("rectangle",0,0,1100,1300);
 
 //create shield
 shieldOrb = createSprite(200, 200);
@@ -281,12 +281,13 @@ function reset(){
 }
 
 function spawnShield() {
-  if(World.frameCount%150==0 && shieldCount==0){
+  if(World.frameCount%10==0 && shieldCount==0){
     shield = createSprite(1100,Math.round(random(50, 250)));
     shield.addImage(shieldImg);
     shield.scale = 0.25;
     shield.velocityX = -(6 + 2*distance/150);
     shield.setLifetime=170;
+    shield.debug = true;
     shieldG.add(shield);
   }
 }
