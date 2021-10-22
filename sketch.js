@@ -281,7 +281,7 @@ function reset(){
 }
 
 function spawnShield() {
-  if(World.frameCount%10==0 && shieldCount==0){
+  if(World.frameCount%200==0 && shieldCount==0){
     shield = createSprite(1100,Math.round(random(50, 250)));
     shield.addImage(shieldImg);
     shield.scale = 0.25;
